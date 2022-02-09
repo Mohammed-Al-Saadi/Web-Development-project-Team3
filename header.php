@@ -46,9 +46,7 @@ background-color: rgb(93, 175, 223);
     color: black;
 
 }
-.followus a{
-    font-size: 20px;
-}
+
 
 .container-fluid {
 
@@ -56,9 +54,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 }
 @media(max-width: 1000px){
-    .copyright{
-        margin: 0px;
-    }
+ 
     .navbar a{
         margin-left: 10px;
    }
