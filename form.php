@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form method="POST" action="LoginInfo.php">
+<form method="POST" action="create.php">
         <div class="col-md">
   	        <label for="UserID">User ID:</label> <input type="text" id="USERID" name="USERID" required></p>
         </div>
