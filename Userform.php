@@ -92,7 +92,7 @@ h2{
     <?php
 include 'connect.php';
 
-$sql=" SELECT * FROM Login WHERE id=(SELECT max(id) FROM Login)";
+$sql=" SELECT * FROM login WHERE id=(SELECT max(id) FROM login)";
 $result = $conn -> query($sql);
 if($result ->num_rows > 0) {
     
@@ -100,7 +100,7 @@ while($row = $result ->fetch_assoc()){
 
 
 
-    echo "<table><tr>". "<h2>Hey ". $row['Lastname'] ." " .$row['Firstname'] .", welcome to wecare.</h2>". "</tr></table><br>";
+    echo "<table><tr>". "<h2>Hey ". $row['lastname'] ." " .$row['firstname'] .", welcome to wecare.</h2>". "</tr></table><br>";
 echo "<table><tr>" ."<p>This page allows you to check your history and manage your bookings.</p> "."</tr></table>";
 }
 }
