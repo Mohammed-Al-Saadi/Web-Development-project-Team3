@@ -20,7 +20,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 
 $sql="select * from login where  username='".$username."' AND password='".$password."' AND name='".$name."'";
-
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 
