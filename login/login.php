@@ -1,37 +1,46 @@
 <?php
+session_start();
 
 $servername="db";
 $username="MohammedAlsaadi";
 $password="password1";
 $dbname="MohammedAlsaadi";
 $conn = new mysqli($servername,$username,$password,$dbname);
-if($conn ===false){
+if($conn ===false)
+{
 die("conection failed:");
 }
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     $username=$_POST["username"];
     $password=$_POST["password"];
-    $firstname=$_POST["firstname"];
+    $name=$_POST["name"];
 
 
-}
-$sql="select * from login where username='".$username."' AND password='".$password."' AND firstname='".$firstname."'";
 
+
+$sql="select * from login where  username='".$username."' AND password='".$password."' AND name='".$name."'";
 $result=mysqli_query($conn,$sql);
-
 $row=mysqli_fetch_array($result);
+
 if($row["usertype"]=="user")
 {
-    header("location:Userform.php");
+    $_SESSION["username"]=$username;
+header("location:Userform.php");
 }
-if($row["usertype"]=="admin")
+elseif($row["usertype"]=="admin")
 {
-    echo "admin";
+    $_SESSION["emailID"]=$username;
+
+    header("location:employee.php");
+
 }
-else{
+else
+{
     echo "no";
 }
+}
+
 
 ?>
 
@@ -53,9 +62,11 @@ else{
         <div style="background-color:grey; width:500px;">
 
         <form action="#" method="POST">
+     
+      
         <div>
-       <lable>Firstname</lable>
-       <input type ="text" name ="firstname"required>
+       <lable>Username</lable>
+       <input type ="text" name ="name"required>
    </div>
    <div>
        <lable>Username</lable>
@@ -63,7 +74,7 @@ else{
    </div>
    <div>
        <lable>Password</lable>
-       <input type ="text" name ="password"required>
+       <input type ="password" name ="password"required>
    </div>  
    <div>
    <input type ="submit" value ="Login">

@@ -1,9 +1,17 @@
 <?php
 
+include 'connect.php';
 
-
+session_start();
+if(!isset($_SESSION["username"]))
+{
+    header("location:login.php");
+}
+include 'header.php';
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +25,19 @@
     font-family:arial;
     margin-bottom:100px;
     padding-top:50px;
+    
+
+}
+h2{
+    margin-right:90px;
 
 }
 
 
-p{
+.row1 p{
     font-size:20px;
     margin-left:40px;
+
 
 }
 
@@ -31,10 +45,12 @@ p{
     text-decoration:none;
     color:black;
     font-size:20px;
+    
 }
 .row2{
     font-size:20px;
 margin-bottom:100px;
+
 
 
 
@@ -50,6 +66,9 @@ margin-bottom:100px;
 .row2 .col{
 margin:0 auto;
 list-style: none;
+width:450px;
+text-align:start;
+
 
 }
 .row2 .col a{
@@ -86,7 +105,9 @@ h2{
 
 </head>
 <body>
+
     <div class="row row1" >
+
         <div class="col-lg-8">
     <?php
 include 'connect.php';
@@ -96,10 +117,8 @@ $result = $conn -> query($sql);
 if($result ->num_rows > 0) {
     
 while($row = $result ->fetch_assoc()){
-
-
-
-    echo "<table><tr>". "<h2>Hey "." " .$row['firstname'] .", welcome to wecare.</h2>". "</tr></table><br>";
+echo $row["logintime"];
+    echo "<table><tr>". "<h2>Hey "." ". $row["username"] .", welcome to wecare.</h2>". "</tr></table><br>";
 echo "<table><tr>" ."<p>This page allows you to check your history and manage your bookings.</p> "."</tr></table>";
 }
 }
@@ -111,7 +130,7 @@ echo "<table><tr>" ."<p>This page allows you to check your history and manage yo
     </div>
 
     <div class="col-lg-4  col3">
-    <button ><a href="">Logout</a></button>
+    <button ><a href="logout.php">Logout</a></button>
 
 
 </div>
@@ -131,12 +150,14 @@ echo "<table><tr>" ."<p>This page allows you to check your history and manage yo
 
 <li><a href="??????">More info</a></li><br>
 
+
 </ul>
 
 
 </div>
 
        <div class="col-lg-6 col2">
+
 
           <div class="form-group">
               <p style="font-size:30px;"><b>book your time.</b></p>
@@ -185,10 +206,12 @@ echo "<table><tr>" ."<p>This page allows you to check your history and manage yo
        </div>
      </div>
 
-
     </div>
 
 </body>
+<?php
+include 'footer.php';
+?>
 </html>
 <?php
 ?>
