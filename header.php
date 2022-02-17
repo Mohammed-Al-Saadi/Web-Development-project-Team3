@@ -35,6 +35,29 @@ background-color: rgb(93, 175, 223);
 .container-fluid {
 font-family: Arial, Helvetica, sans-serif;
 }
+.footer
+    
+    {
+   
+       
+        margin-top: 100px;
+        background-color: rgb(93, 175, 223);
+    }
+.copyright{
+ margin-left: 20px;
+}
+.copyright p
+{
+margin-left: 5px;
+}
+.footer img {
+width: 120px;
+height: auto;
+}
+@media(max-width: 1000px){
+    .copyright{
+        margin: 0px;
+    }
 @media(max-width: 1000px){
  
     .navbar a{
@@ -46,6 +69,7 @@ border-width: 1px;
 border-bottom-color: rgb(255, 228, 204);
 }
 }
+
 </style>
 </head>
 <body>
@@ -84,6 +108,5 @@ border-bottom-color: rgb(255, 228, 204);
           </div>
         </div>
       </nav>
+      <div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html>
