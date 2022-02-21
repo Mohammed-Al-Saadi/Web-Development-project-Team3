@@ -1,26 +1,13 @@
 <?php
 include 'connect.php';
-#display the content in the edit
-$id=$_GET['id'];
-$sql="select * from appointment where id=$id";
-$result=mysqli_query($conn,$sql);
-$row=mysqli_fetch_assoc($result);
-$username=$row['username'];
-$date1=$row['date1'];
-$gender=$row['gender'];
-$service=$row['service'];
-$tim=$row['tim'];
-
 if(isset($_POST['submit']))
 {
-    $id=$_GET['id'];
-
 $username=$_POST['username'];
 $date1=$_POST['date1'];
 $gender=$_POST['gender'];
 $service=$_POST['service'];
 $tim=$_POST['tim'];
-$sql="update appointment set  username='$username',date1='$date1',gender='$gender',service='$service',tim='$tim' where id =$id";
+$sql="insert into appointment (username,date1,gender,service,tim)  value('$username','$date1','$gender','$service','$tim')";
 $result=mysqli_query($conn,$sql);
 if($result){
     header("location:employee.php");
@@ -46,18 +33,17 @@ include 'header.php';
 <body>
 <style>
    
-   .col1{
-       margin:50px auto;
+    .col1{
+        margin:50px auto;
 
-   }
+    }
 .form1 .btn{
-   border-radius:5px;
-   margin-top:30px;
+    border-radius:5px;
+    margin-top:50px
 
 }
 
 </style>
-
 <div class="container">
 <form action="" method="POST">
 
@@ -68,18 +54,17 @@ include 'header.php';
       <!-- Text input-->
           <div class="form-group">
               <label class="control-label" for="email">EmailID</label>
-              <input id="email" name="username" value=<?php echo $username #display the content in the edit
-?> type="text" placeholder="E-Mail" class="form-control input-md" required>
+              <input id="email" name="username" type="text" placeholder="E-Mail" class="form-control input-md" required>
           </div>
       <!-- Text input-->
           <div class="form-group">
               <label class="control-label" for="date">Date</label>
-              <input id="date" name="date1" type="date" placeholder=" Date" class="form-control input-md" value=<?php echo $date1?> required>
+              <input id="date" name="date1" type="date" placeholder=" Date" class="form-control input-md" required>
           </div>
       <!-- Select Basic -->
           <div class="form-group">
               <label class="control-label" for="time">Time</label>
-              <select id="time" name="tim" placeholder="Time" class="form-control" required value=<?php echo $tim?>>
+              <select id="time" name="tim" placeholder="Time" class="form-control" required>
                   <option value="8:00 to 9:00">8:00 to 9:00</option>
                   <option value="9:00 to 10:00">9:00 to 10:00</option>
                   <option value="10:00 to 11:00">10:00 to 11:00</option>
@@ -94,7 +79,7 @@ include 'header.php';
           <!--Select Basic-->
           <div class="form-group">
               <label class="control-label" for="gender">Gender</label>
-              <select id="gender" name="gender" placeholder="Gender" class="form-control" required value=<?php echo $gender?>>
+              <select id="gender" name="gender" placeholder="Gender" class="form-control" required>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
@@ -104,7 +89,7 @@ include 'header.php';
       <!-- Select Basic -->
           <div class="form-group">
               <label class="control-label" for="Services">Services</label>
-              <select id="services" name="service" placeholder="Select Service" class="form-control" value=<?php echo $service?>required>
+              <select id="services" name="service" placeholder="Select Service" class="form-control" required>
                   <option value="Service#1">Service#1</option>
                   <option value="Service#2">Service#2</option>
                   <option value="Service#3">Service#3</option>
@@ -113,7 +98,7 @@ include 'header.php';
           </div>
       <!-- Button -->
           <div class="form-group form1">
-              <button type="submit" class="btn btn-primary"  name="submit" >Make An Appointment</button>
+              <button type="submit" class="btn btn-primary" name="submit" >Add an appointment</button>
           </div>
 
        </div>
@@ -122,8 +107,9 @@ include 'header.php';
 </form>
 
 </div>
-<?php include 'footer.php';?>
 </body>
 
     
+</body>
 </html>
+<?php include 'footer.php';?>

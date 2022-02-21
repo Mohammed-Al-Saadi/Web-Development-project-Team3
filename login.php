@@ -1,6 +1,6 @@
 <?php
-session_start();
 
+session_start();
 $servername="db";
 $username="MohammedAlsaadi";
 $password="password1";
@@ -14,12 +14,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     $username=$_POST["username"];
     $password=$_POST["password"];
-    $name=$_POST["name"];
 
 
 
 
-$sql="select * from login where  username='".$username."' AND password='".$password."' AND name='".$name."'";
+$sql="select * from login where  username='".$username."' AND password='".$password."' ";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
 
@@ -30,7 +29,7 @@ header("location:Userform.php");
 }
 elseif($row["usertype"]=="admin")
 {
-    $_SESSION["emailID"]=$username;
+    $_SESSION["username"]=$username;
 
     header("location:employee.php");
 
@@ -40,6 +39,7 @@ else
     echo "no";
 }
 }
+include 'header.php';
 
 
 ?>
@@ -56,31 +56,47 @@ else
     <title>Document</title>
 </head>
 <body>
-    <center>
-        <h2>Login form</h2>
+    <div class="row row1">
+        <div class="col-lg-12 col1">
+        <h2>Login form:</h2>
        
-        <div style="background-color:grey; width:500px;">
+      
 
         <form action="#" method="POST">
      
       
-        <div>
-       <lable>Username</lable>
-       <input type ="text" name ="name"required>
-   </div>
-   <div>
-       <lable>Username</lable>
+  
+   <div class="input">
+       <lable style="font-size:20px">Username:</lable><br>
        <input type ="text" name ="username"required>
    </div>
-   <div>
-       <lable>Password</lable>
-       <input type ="password" name ="password"required>
+   <div class="input">
+       <lable style="font-size:20px">Password :</lable><br>
+       <input  type ="password" name ="password"required>
    </div>  
-   <div>
-   <input type ="submit" value ="Login">
+   <div class="btn">
+   <input type ="submit"  class="btn btn-primary" value ="Login">
+<button class="btn btn-primary" >Sign up</button>
 </div>
 </form>
+  
    </div>
-   <center>
+   </div>
+   <style>
+.row1{
+    margin:60px auto;
+text-align:center;
+}
+.input{
+    margin-top:30px;
+
+}
+.btn{
+    margin-top:20px;
+}
+.col1{
+}
+   </style>
+   <?php include 'footer.php';?>
 </body>
 </html>

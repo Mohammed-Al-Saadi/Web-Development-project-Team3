@@ -117,11 +117,16 @@ $result = $conn -> query($sql);
 if($result ->num_rows > 0) {
     
 while($row = $result ->fetch_assoc()){
-echo $row["logintime"];
-    echo "<table><tr>". "<h2>Hey "." ". $row["username"] .", welcome to wecare.</h2>". "</tr></table><br>";
+    echo "<table><tr>". "<h2>Hey "." ". $_SESSION["username"] .", welcome to wecare.</h2>". "</tr></table><br>";
 echo "<table><tr>" ."<p>This page allows you to check your history and manage your bookings.</p> "."</tr></table>";
+
 }
+
+
 }
+
+
+
 
     ?>
     
@@ -209,9 +214,8 @@ echo "<table><tr>" ."<p>This page allows you to check your history and manage yo
     </div>
 
 </body>
-<?php
-include 'footer.php';
-?>
+
 </html>
 <?php
+include 'footer.php';
 ?>
