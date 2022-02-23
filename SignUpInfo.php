@@ -3,13 +3,12 @@
   include 'database.php';
 
 
-$Firstname = $_POST['Firstname'];
-$Lastname = $_POST['Lastname'];
+$Username = $_POST['Username'];
 $emailID = $_POST['emailID'];
 $Password= $_POST['Password'];
 
-$SQLLogin="INSERT INTO `Login` (`Firstname`, `Lastname`, `emailID`, `Password`)
-	VALUES ('$Firstname', '$Lastname', '$emailID', '$Password')";
+$SQLLogin="INSERT INTO `SignUp` (`Username`, `email`, `Password`)
+	VALUES ('$Username', '$emailID', '$Password')";
 
 
 if($conn->query($SQLLogin) === TRUE) {
