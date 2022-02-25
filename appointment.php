@@ -59,9 +59,9 @@ include 'header.php';
           <div class="form-group">
               <label class="control-label" for="gender">Gender</label>
               <select id="gender" name="Gender" placeholder="Gender" class="form-control" required>
-                  <option value="8:00 to 9:00">Male</option>
-                  <option value="9:00 to 10:00">Female</option>
-                  <option value="9:00 to 10:00">Other</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
             </select>
            </div>
 

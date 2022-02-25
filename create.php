@@ -16,14 +16,38 @@ VALUES ('$UserID', '$EmailID', '$Date', '$Time1', '$Gender', '$Service')";
 
 
 if($conn->query($sql) === TRUE){
-    echo "Information Saved";
+    echo "<h3>Information Saved</h3>";
    
 }
+
 else{
-    echo "ERROR: ".$sql. "<br>" . $conn->error;
+    echo" Please check your details ";
 }
 $conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h3{
+        text-align: center;
+    }
+    
+
+</style>
+<body>
+
+<div class ="footer">
 <?php
 include 'footer.php';
 ?>
+</div>
+    
+</body>
+</html>
