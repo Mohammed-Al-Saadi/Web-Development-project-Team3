@@ -56,23 +56,30 @@ include 'header.php';
     <title>Document</title>
 </head>
 <body>
+ 
+
+
     <div class="row row1">
-        <div class="col-lg-12 col1">
-        <h2>Login form:</h2>
+    <center>
+    <h3>Welcome to wecare login.</h3>
+    <br> <br><br> <br><br><br><br>
+
+        <div class="col-lg-2 col1">
        
       
 
         <form action="#" method="POST">
      
-      
+        <h2>Login </h2>
+
   
    <div class="input">
        <lable style="font-size:20px">Username:</lable><br>
-       <input type ="text" name ="username"required>
+       <input type ="text" placeholder="Enter username..." name ="username"required>
    </div>
    <div class="input">
        <lable style="font-size:20px">Password :</lable><br>
-       <input  type ="password" name ="password"required>
+       <input  type ="password" placeholder="Enter password..."name ="password"required>
    </div>  
    <div class="btn">
    <input type ="submit"  class="btn btn-primary" value ="Login">
@@ -81,6 +88,11 @@ include 'header.php';
 </form>
   
    </div>
+   <br><br> <br> <br><br><br>
+ 
+
+   </center>
+
    </div>
    <style>
 .row1{
@@ -91,11 +103,21 @@ text-align:center;
     margin-top:30px;
 
 }
-.btn{
+.btn .btn{
     margin-top:20px;
 }
 .col1{
 }
+form{
+    border:solid;
+border-radius:9px;
+
+}
+h2{
+    background-color:#98D6F5;
+    border-bottom:solid;
+}
+
    </style>
    <?php include 'footer.php';?>
 </body>
