@@ -1,4 +1,8 @@
+
+
+
 <?php
+
 include 'connect.php';
 if(isset($_POST['submit']))
 {
@@ -10,7 +14,7 @@ $tim=$_POST['tim'];
 $sql="insert into appointment (username,date1,gender,service,tim)  value('$username','$date1','$gender','$service','$tim')";
 $result=mysqli_query($conn,$sql);
 if($result){
-    header("location:employee.php");
+    header("location:employee.php#section1");
 
 }
 else{
@@ -55,11 +59,15 @@ include 'header.php';
     margin-top:50px
 
 }
+h3{
+    text-align:center;
+}
 
 </style>
 <div class="container">
 <form action="" method="POST">
-
+<br><br>
+<h3>Add an appointment.</h3>
 <div class="row row3">
        <div class="col-lg-8 col1">
 
@@ -126,4 +134,5 @@ include 'header.php';
 
     
 </html>
+<br><br><br><br><br>
 <?php include 'footer.php';?>

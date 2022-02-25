@@ -128,6 +128,9 @@ echo "<table><tr>" ."<p>This page allows you to check your history and manage yo
 
 
 
+
+
+
     ?>
     
    
@@ -137,6 +140,7 @@ echo "<table><tr>" ."<p>This page allows you to check your history and manage yo
     <div class="col-lg-4  col3">
     <button ><a href="logout.php">Logout</a></button>
 
+    <?php echo "Today is "  . date("l")."<br>"."Date:". date("d-m-Y") . "<br>"?>
 
 </div>
 </div>
