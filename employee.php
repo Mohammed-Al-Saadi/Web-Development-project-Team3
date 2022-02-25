@@ -19,10 +19,7 @@ $result = $conn -> query($sql);
 if($result ->num_rows > 0) {
 
 }
-include 'header.php';
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,49 +27,232 @@ include 'header.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
+<style>
+
+
+
+.btn a{
+    color:white;
+    float:right;
+}
+
+
+.input-sm{
+height:100px;
+
+} 
+
+
+
+
+.td1{
+    text-align:center;
+
+}
+h4{
+    text-align:center;
+}
+    </style>
+ <style>
+
+
+.row1 {
+list-style:none;
+}
+
+section{
+    height:100vh;
+
+}
+
+.row1 {
+
+}
+.fixed li{
+    list-style:none;
+  margin-bottom:100px;
+
+}
+.fixed {
+    position:fixed;
+    font-size:18px;
+    bottom:280px;
+    background: #98D6F5;
+    padding:40px;
+    border-radius:9px;
+    
+}
+.fixed a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+.section1{
+}
+
+.row3{
+    padding-top:100px;
+    padding-bottom:100px;
+
+}
+.row0{
+    
+    text-align:center;
+    margin-bottom:50px;
+}
+.row4{
+    padding-top:150px;
+    
+}
+.col6 
+{
+   margin:0 auto;
+
+}
+.row5{
+    padding-top:200px;
+
+}
+table{
+    border:solid;
+    margin:0 auto;
+
+}
+.input{
+height:37px;
+width:140px;
+
+}
+.colbtn .btn{
+    margin-top:20px;
+}
+.coldate p{
+    margin-top:24px;
+    font-size:18px;
+
+}
+.btn a{
+    text-decoration:none;
+}
+.fixed a:hover{
+    color:white;
+}
+
+.col4{
+    text-align:center;
+}
+.colsumm{
+
+    margin:0 auto;
+
+}
+.td2{
+    width:150px;
+}
+
+.my-custom-scrollbar {
+height: 400px;
+overflow: scroll;
+}
+@media (max-width:1200px)
+{
+.fixed{
+    position: static !important;
+}
+
+}
+
+ </style>
 </head>
 <body>
-    <div class="contanier">
-        <div class="row row1">
-<div class="col-lg-8 col2">
+<?php include 'header.php' ?>
+
+<div class="container-fluid">
+    
+
+<div class="row row0" >
+
+<div class="col-lg-6">
 <?php
 $_POST['username']=$username;
 
-echo "<h4><br>Hey ".$_SESSION["username"].
- ", We wish you a pleasent working hours!"."</h4>";
+echo "<h5><br>Hey ".$_SESSION["username"].
+ ", We wish you a pleasent working hours!"."</h5>";
+ 
 ?>
+
+
+
+</div>
+<div class="col-lg-3 coldate">
+<p>
+<?php
+
+echo "Today is "  . date("l")." :"."Date:". date("d-m-Y") . "";
+?>
+</P>
+</div>
+<div class="col-lg-3 colbtn">
+<button type="button" class="btn btn-primary"><a href="logout.php" class="text-light" style="text-decoration:none; " >Logout</a></button>
 
 </div>
 
-
         </div>
-        <div class="row row2">
-        <div class="col-lg">
+       
+
+
+    
+
+
+   <section id="section1">
+   <div class="row row3">
+            <div class="col-8  ">
 <h4>Patient appointment:</h4>
         </div>
 
-<div class="col-lg col1">
-<button type="button"class="btn btn-primary" ><a href="userapp.php"  class="text-light"style="text-decoration:none">Add an appointment</a></button>
+<div class="col-4 col4">
 
-<button type="button" class="btn btn-primary"><a href="logout.php" class="text-light" style="text-decoration:none; " >Logout</a></button>
+<input type="text" class="input"  id="myInput" onkeyup='tableSearch()' placeholder="Search by name..">
+
+<button type="button"class="btn btn-primary" ><a href="userapp.php"  class="text-light"style="text-decoration:none">Add appointment</a></button>
+
 
 
 </div>
 
-        </div>
-        <div class="row row3">
-            <div class="col-12 col ">
+     
+</div>
 
-            <table >
-<tr>
-<td >ID</td>
-<td>Username</td>
-<td>Date</td>
-<td>gender</td>
-<td>Service</td>
-<td>Time</td>
-<td class="td1">opiration</td>
+
+
+<div class="row">
+<div class="col-lg-3 row1">
+
+<ul class="fixed" >
+    
+    <li><a href="#section1">Patient appointment</a></li>
+    <li><a href="#section2">Add a summary</a></li>
+    <li><a href="#section3">Patient summaries:</a></li>
+</ul>
+</div>
+
+    <div class="col-md-8">
+<form action="" method="POST">
+
+<div class=" my-custom-scrollbar">
+            <table   class="table  " id="myTable" >
+
+<tr style="border:solid;">
+
+<td style="border:solid;">ID</td>
+<td style="border:solid;">Username</td>
+<td style="border:solid;">Date</td>
+<td style="border:solid;">gender</td>
+<td style="border:solid;">Service</td>
+<td style="border:solid;">Time</td>
+<td class="td1">operation</td>
 
 </tr>
 <?php
@@ -88,15 +268,15 @@ while($row=mysqli_fetch_assoc($result)){
     ?>
 
 
-<tr>
-    <td><?php echo $id;   ?></td>
-    <td><?php echo $username;   ?></td>
-    <td><?php echo $date1  ; ?></td>
-    <td><?php echo $gender  ; ?></td>
-    <td><?php echo $service  ; ?></td>
-    <td><?php echo $tim  ; ?></td>
+<tr style="border:solid;">
+    <td style="border:solid;"><?php echo $id;   ?></td>
+    <td style="border:solid;"><?php echo $username;   ?></td>
+    <td style="border:solid;"><?php echo $date1  ; ?></td>
+    <td style="border:solid;"><?php echo $gender  ; ?></td>
+    <td style="border:solid;"><?php echo $service  ; ?></td>
+    <td style="border:solid;"><?php echo $tim  ; ?></td>
 
-<td class="td1"><button type="button"class="btn btn-primary"><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" class="text-light"style="text-decoration:none;">Edit</a></button><button type="button"class="btn btn-danger"><a href="delete.php?id=<?php echo $row['id'];  ?>"  class="text-light"style="text-decoration:none;">delete</a></button>
+<td class="td1" style="border:solid;"><button type="button"class="btn btn-primary" ><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" class="text-light">Edit</a></button><button type="button"class="btn btn-danger" style="text-decoration:none; "><a href="delete.php?id=<?php echo $row['id'];  ?>"  class="text-light"style="text-decoration:none;">delete</a></button>
 </td>
 
 </tr>
@@ -107,33 +287,48 @@ while($row=mysqli_fetch_assoc($result)){
 
 ?>
 
+
             </table>
+            </div>
+</form>
+</div>
+</div>
+
 </div>
         </div>
+ 
 
-        <div class="row row4">
-<div class="col-lg-4 col4">
 
-<form action="addtext.php" method="GET"> 
+   <section id="section2">
+
+
+    <div class="row row4">
+        <div class="col-lg-6 col6">
+    <form action="addtext.php" method="GET"> 
 <h4>  Add a summary of patient visit: </h4>
 <label class="control-label" for="email">Username:</label>
               <input id="email" name="username" type="text" placeholder="E-Mail" class="form-control input-md" required>
 
               <label class="control-label" for="text">text:</label>
-              <input id="text" name="text" type="text" placeholder="text"  class="form-control input-sm"  required>
+              <input id="text" name="text" type="text" placeholder="text"  class="form-control input-sm"  required><br>
 
-              <button type="submit" class="btn btn-primary"  name="submit" value="submit" >submit</button>
+              <button type="submit" class="btn btn-primary"  name="submit" value="submit" >Add</button>
         
 </form>
 </div>
-
     </div>
-    <div class="row">
-        <div class="col">
-        <table>
-        <h4>Patient summaries:</h4>
+  </section>  
+    <section id="section3">
 
-        <tr><td>username</td><td>text</td><td>operation</td></tr>
+<div class="row row5">
+<h4>Patient summaries:</h4>
+
+        <div class="col-6 colsumm">
+        <div class=" my-custom-scrollbar">
+
+        <table class="table">
+
+        <tr style="border:solid;"><td style="border:solid;">username</td><td style="border:solid;">text</td><td class="td2">operation</td></tr>
             <?php
 include 'connect.php';
 $sql="select * from textbox";
@@ -147,74 +342,48 @@ while($row=mysqli_fetch_assoc($result)){
     $username=$row['username'];
 
     ?>
-    <table>
+  
         
-           <tr><td><?php echo $username;?></td><td><?php echo $text;?></td><td><button><a href="deletetext.php?username=<?php echo $row['username']; ?> " >delete</a></button></td></tr>
+    <tr style="border:solid;"><td  style="border:solid;"><?php echo $username;?></td><td><?php echo $text;?></td ><td style="border:solid;"><button class="btn btn-danger"><a href="deletetext.php?username=<?php echo $row['username']; ?> " >delete</a></button><button class="btn btn-primary"><a href="editsummary.php?username=<?php echo $row['username'] ?> " >Edit</a></button></td></tr>
         
            <?php }?>
 
         </table> 
-        
+</div>
         </div>
         
     </div>
+    <br><br> <br>
+    <br><br> 
+    <?php include 'footer.php' ?>
 </div>
-<?php 
-    include 'footer.php';?>
-    <style>
-table{
-    border:solid;
-    margin:0 auto;
+
+  </section>
+  </div>
+  <script type="application/javascript">
+function tableSearch(){
+    let input , filter ,table ,tr,td, i, txtValue;
+//init variables
+input = document.getElementById("myInput");
+filter =input.value.toUpperCase();
+table =document.getElementById("myTable");
+tr =table.getElementsByTagName("tr");
+
+for(let i =0; i< tr.length; i++){
+td =tr[i].getElementsByTagName("td")[1];
+if(td){
+    txtValue= td.textContent ;
+    if(txtValue.toUpperCase().indexOf(filter) > -1){
+        tr[i].style.display="";
+
+    }
+    else{
+        tr[i].style.display="none";
+    }
 }
-td{
-    border:solid;
-    width:150px;
-
 }
+}  
+        </script>
 
-
-.btn a{
-    color:white;
-}
-
-.col1{
-
-margin-left:120px;
-
-}
-.input-sm{
-height:100px;
-
-} 
-
-.col2{
-    text-align:center;
- 
-}
-
-.row2{
-margin-top:50px;
-margin-bottom:50px;
-text-align:center;
-
-}
-.col4{
-    margin:40px auto;
-
-}
-.col4 button{
-border-radius:5px;
-margin-top:20px;
-
-}
-.td1{
-    text-align:center;
-
-}
-h4{
-    text-align:center;
-}
-    </style>
- 
 </body>
 </html>
