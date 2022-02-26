@@ -1,4 +1,5 @@
-<?php include 'header.php' ?>
+<?php
+include 'header.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/ bootstrap.min.css" rel="stylesheet" integrity="sha384 +0n0xVW2eSR500mGNYDnhZAbDs0XxcvSN1TPpr VMTNDbiYZCxYb0017+AMvYTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="index2.css">
   <title>Document</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#date").datepicker({
+                minDate: 0
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -127,46 +138,76 @@
   </div>
   <div class="row row3">
     <div class="col-lg-12">
+<form action="#" method="post">
+    <div class="form-group">
+                        <label class="control-label" for="email">EmailID</label>
+                        <input id="email" name="username" type="text" placeholder="E-Mail" class="form-control input-md" required>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label" for="date">Date</label>
+                        <input required type="text" name="date1" id="date" class="form-control input-md" value="date" required>
+                    </div>
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <label class="control-label" for="time">Time</label>
+                        <select id="time" name="tim" placeholder="Time" class="form-control" required>
+                            <option value="8:00 to 9:00">8:00 to 9:00</option>
+                            <option value="9:00 to 10:00">9:00 to 10:00</option>
+                            <option value="10:00 to 11:00">10:00 to 11:00</option>
+                            <option value="11:00 to 12:00">11:00 to 12:00</option>
+                            <option value="12:00 to 13:00">12:00 to 13:00</option>
+                            <option value="14:00 to 15:00">14:00 to 15:00</option>
+                            <option value="15:00 to 16:00">15:00 to 16:00</option>
+                            <option value="16:00 to 17:00">16:00 to 17:00</option>
 
-      <div class="form-group">
-        <p style="font-size:30px;"><b>book your time.</b></p>
-        <label class="control-label" for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
-      </div>
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="control-label" for="email">Email</label>
-        <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
-      </div>
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="control-label" for="date">Preferred Date</label>
-        <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md">
-      </div>
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="control-label" for="time">Preferred Time</label>
-        <select id="time" name="time" class="form-control">
-          <option value="8:00 to 9:00">8:00 to 9:00</option>
-          <option value="9:00 to 10:00">9:00 to 10:00</option>
-          <option value="10:00 to 1:00">10:00 to 1:00</option>
-        </select>
-      </div>
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="control-label" for="appointmentfor">Appointment For</label>
-        <select id="appointmentfor" name="appointmentfor" class="form-control">
-          <option value="Service#1">Service#1</option>
-          <option value="Service#2">Service#2</option>
-          <option value="Service#3">Service#3</option>
-          <option value="Service#4">Service#4</option>
-        </select>
-      </div>
-      <!-- Button -->
-      <div class="form-group">
-        <button id="singlebutton" name="singlebutton" class="btn btn-default">Make An Appointment</button>
-      </div>
+                        </select>
+                    </div>
+                    <!--Select Basic-->
+                    <div class="form-group">
+                        <label class="control-label" for="gender">Gender</label>
+                        <select id="gender" name="gender" placeholder="Gender" class="form-control" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
 
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <label class="control-label" for="Services">Services</label>
+                        <select id="services" name="service" placeholder="Select Service" class="form-control" required>
+                            <option value="Service#1">Service#1</option>
+                            <option value="Service#2">Service#2</option>
+                            <option value="Service#3">Service#3</option>
+                            <option value="Service#4">Service#4</option>
+                        </select>
+                    </div>
+                    <!-- Button -->
+                    <div class="form-group form1">
+                        <button type="submit" class="btn btn-primary" name="submit">Add appointment</button><br>
+                        <?php
+include 'connect.php';
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $date1 = $_POST['date1'];
+    $gender = $_POST['gender'];
+    $service = $_POST['service'];
+    $tim = $_POST['tim'];
+    $sql = "insert into appointment (username,date1,gender,service,tim)  value('$username','$date1','$gender','$service','$tim')";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+      
+        echo "Appointment saved.";
+    } else {
+        die(mysqli_error($conn));
+    }
+}
+
+?>
+                    </div>
+
+      </form>
 
 
 
