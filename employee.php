@@ -70,18 +70,18 @@ if ($result->num_rows > 0) {
 
         }
 
-        .row1 {}
+  
 
         .fixed li {
             list-style: none;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
 
         }
 
         .fixed {
             position: fixed;
             font-size: 18px;
-            bottom: 280px;
+            bottom: 200px;
             background: #98D6F5;
             padding: 40px;
             border-radius: 9px;
@@ -173,7 +173,7 @@ if ($result->num_rows > 0) {
         }
 
         .my-custom-scrollbar {
-            height: 400px;
+            height: 420px;
             overflow: scroll;
         }
 
@@ -330,8 +330,8 @@ if ($result->num_rows > 0) {
                     <label class="control-label" for="email">Username:</label>
                     <input id="email" name="username" type="text" placeholder="E-Mail" class="form-control input-md" required>
 
-                    <label class="control-label" for="text">text:</label>
-                    <input id="text" name="text" type="text" placeholder="text" class="form-control input-sm" required><br>
+                    <label class="control-label" for="text">Text:</label>
+                    <textarea id="text" name="text" type="text" placeholder="text" class="form-control input-sm" required></textarea><br>
 
                     <button type="submit" class="btn btn-primary" name="submit" value="submit">Add</button>
 

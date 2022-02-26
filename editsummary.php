@@ -41,7 +41,7 @@ $username = $_GET['username'];
                     <input id="username" name="username" type="text" placeholder="E-Mail" class="form-control input-md" value=<?php echo $username ?>>
 
                     <label class="control-label" for="text">text:</label>
-                    <input id="text" name="text" type="text" placeholder="text" class="form-control input-sm">
+                    <textarea id="text" name="text" type="text" placeholder="text" class="form-control input-sm"></textarea>
 
                     <button type="submit" class="btn btn-primary" name="submit" value="submit">submit</button>
                     <button class="btn btn-primary"><a href="employee.php#section3" style="text-decoration:none" class="text-light">Home</a></button>

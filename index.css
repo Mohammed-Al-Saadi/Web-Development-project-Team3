@@ -1,0 +1,122 @@
+.navbar-brand img {
+    width: 180px;
+
+} 
+.container-fluid {
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.nav-item a{
+margin-left: 110px;
+font-weight: bold;
+
+
+}
+
+.d-flex{
+
+    margin-right: 30px;
+
+}
+
+
+.content{
+   
+    margin-top: 50px;
+    
+    }
+    
+    .picleft img{
+width: 520px;
+height: auto; 
+border-radius: 9px;
+
+}
+
+  
+    
+    .footer
+    
+    {
+   
+       
+        margin-top: 100px;
+        background-color: rgb(93, 175, 223);
+    }
+
+.copyright{
+
+ margin-left: 20px;
+
+}
+.copyright p
+{
+margin-left: 5px;
+
+}
+.footer img {
+width: 120px;
+height: auto;
+}
+
+
+body{
+background-image: url("Picture1.jpg");    background-size: cover;
+    background-position: center;
+}
+
+.inforight{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.card{
+    margin-top: 90px;
+    width: 300px;
+margin:0 auto;
+float: none;
+margin-top: 40px;
+border-radius: 9px;
+
+}
+.navbar{
+background-color: rgb(93, 175, 223);
+
+}
+.dropdown-menu{
+    background-color: rgb(93, 175, 223);
+
+    border: none;
+
+}
+ .btn-outline-success{
+
+    background-color: white;
+    color: black;
+
+}
+.followus a{
+    font-size: 20px;
+}
+
+@media(max-width: 1000px){
+    .copyright{
+        margin: 0px;
+    }
+    .navbar a{
+        margin-left: 10px;
+   }
+   .navbar-nav a{
+border-bottom: 3px inset;
+border-width: 1px;
+border-bottom-color: rgb(255, 228, 204);
+
+}
+
+
+
+
+}
+    
+    

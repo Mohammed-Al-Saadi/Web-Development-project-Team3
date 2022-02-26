@@ -1,0 +1,120 @@
+
+.form-group {
+    width: 300px;
+    margin: auto;
+}
+.row1{
+    margin-top: 60px;
+}
+
+article{
+    margin: auto;
+    text-align: center;
+}
+.form-group button{
+    margin-top: 8px;
+    background-color: rgb(153, 204, 233);
+
+}
+
+.row3{
+    margin: 0 auto;
+
+}
+.carousel{
+    width: 550px;
+    margin: auto;
+
+}
+.carousel-item img{
+ height: 200px;
+ width: 480px;
+}
+.carousel-control-prev-icon{
+    color: black;
+}
+
+.carousel-caption h3{
+    color: rgb(94, 66, 66);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    border-radius: 9px;
+
+}
+
+
+.container-fluid {
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.d-flex{
+
+    margin-right: 30px;
+
+}
+
+
+.content{
+   
+    margin-top: 50px;
+    
+    }
+    
+    .picleft img{
+width: 520px;
+height: auto; 
+border-radius: 9px;
+
+}
+
+  
+    
+
+body{
+background-image: url("Picture1.jpg");    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+ .btn-outline-success{
+
+    background-color: white;
+    color: black;
+
+}
+
+.row2 {
+
+text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;
+
+
+
+
+}
+.row2 a{
+    font-size: 30px;
+    border-width: 1px;
+    border-radius: 9px;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 100px;
+    background-color: rgb(240, 240, 240);
+    
+    
+    }
+ 
+    .dropdown-menu{
+        background-color: rgb(93, 175, 223);
+        border: none;
+    }
+    
+    
