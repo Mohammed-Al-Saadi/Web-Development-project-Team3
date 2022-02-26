@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+if (!isset($_SESSION["username"])) {
+    header("location:login.php");
+} ?>
 <?php
 include 'connect.php';
 if(isset($_GET['submit']))

@@ -1,4 +1,12 @@
 <?php
+session_start();
+if (!isset($_SESSION["username"])) {
+    header("location:login.php");
+} ?>
+
+<?php
+include 'header.php';
+
 include 'connect.php';
 #display the content in the edit
 $id = $_GET['id'];
@@ -12,7 +20,6 @@ $service = $row['service'];
 $tim = $row['tim'];
 
 
-include 'header.php';
 
 ?>
 

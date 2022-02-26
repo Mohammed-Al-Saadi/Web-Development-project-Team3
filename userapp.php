@@ -1,7 +1,11 @@
-<?php include 'header.php'; ?>
+<?php
+session_start();
+if (!isset($_SESSION["username"])) {
+    header("location:login.php");
+} ?>
 
 <?php
-
+include 'header.php';
 include 'connect.php';
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -12,6 +16,7 @@ if (isset($_POST['submit'])) {
     $sql = "insert into appointment (username,date1,gender,service,tim)  value('$username','$date1','$gender','$service','$tim')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
+      
         echo "Appointment saved.";
     } else {
         die(mysqli_error($conn));
