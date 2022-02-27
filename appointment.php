@@ -27,7 +27,7 @@ include 'header.php';
 
           <div class="form-group">
               <p style="font-size:30px;"><b>BOOK YOUR APPOINTMENT.</b></p>
-              <label class="control-label" for="userid">UserID</label>
+              <label class="control-label" for="userid">ID</label>
               <input id="userid" name="UserID" type="text" placeholder="Userid" class="form-control input-md" required>
           </div>
       <!-- Text input-->
