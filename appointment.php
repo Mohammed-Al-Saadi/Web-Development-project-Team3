@@ -46,12 +46,12 @@ include 'header.php';
               <select id="time" name="Time" placeholder="Time" class="form-control" required>
                   <option value="8:00 to 9:00">8:00 to 9:00</option>
                   <option value="9:00 to 10:00">9:00 to 10:00</option>
-                  <option value="10:00 to 1:00">10:00 to 11:00</option>
-                  <option value="10:00 to 1:00">11:00 to 12:00</option>
-                  <option value="10:00 to 1:00">12:00 to 13:00</option>
-                  <option value="10:00 to 1:00">14:00 to 15:00</option>
-                  <option value="10:00 to 1:00">15:00 to 16:00</option>
-                  <option value="10:00 to 1:00">16:00 to 17:00</option>
+                  <option value="10:00 to 11:00">10:00 to 11:00</option>
+                  <option value="11:00 to 12:00">11:00 to 12:00</option>
+                  <option value="12:00 to 13:00">12:00 to 13:00</option>
+                  <option value="13:00 to 14:00">13:00 to 14:00</option>
+                  <option value="14:00 to 15:00">14:00 to 15:00</option>
+                  <option value="15:00 to 16:00">15:00 to 16:00</option>
                   
               </select>
           </div>
