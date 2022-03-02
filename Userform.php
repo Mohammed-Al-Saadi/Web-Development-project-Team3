@@ -69,6 +69,7 @@ include 'header.php';
         }
 
         .row2 .form-group {
+            border:solid;
 
             border-radius: 9px;
             width: 300px;
@@ -118,6 +119,8 @@ include 'header.php';
         .row2 button{
 margin-left:60px;
 
+        }
+        form{
         }
     </style>
 
