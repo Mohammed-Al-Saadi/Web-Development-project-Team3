@@ -69,12 +69,12 @@ include 'header.php';
         }
 
         .row2 .form-group {
-            border:solid;
 
             border-radius: 9px;
             width: 300px;
             margin: 0 auto;
                         background-color: rgb(93, 175, 223);
+                        border:solid;
 
 
         }
@@ -103,6 +103,7 @@ include 'header.php';
             list-style: none;
             background-color: rgb(93, 175, 223);
             border-radius: 9px;
+            border:solid;
 
 
         }
@@ -119,8 +120,6 @@ include 'header.php';
         .row2 button{
 margin-left:60px;
 
-        }
-        form{
         }
     </style>
 
