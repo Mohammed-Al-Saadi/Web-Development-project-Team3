@@ -199,9 +199,10 @@ if (isset($_POST['submit'])) {
     if ($result) {
       
         echo "Appointment saved.";
-    } else {
-        die(mysqli_error($conn));
     }
+     else 
+    {
+echo "Please check your info.";    }
 }
 
 ?>

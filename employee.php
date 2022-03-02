@@ -13,7 +13,7 @@ if ($conn == true) {
 
 
 
-$sql = "select * from appointment";
+$sql = "select * from appointment ORDER BY id DESC";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 }
@@ -297,8 +297,11 @@ if ($result->num_rows > 0) {
                                         <td style="border:solid;"><?php echo $service; ?></td>
                                         <td style="border:solid;"><?php echo $tim; ?></td>
 
-                                        <td class="td1" style="border:solid;"><button type="button" class="btn btn-primary"><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" style="text-decoration:none;color:white" class="text-light">Edit</a></button><button type="button" class="btn btn-danger" style="text-decoration:none; "><a href="delete.php?id=<?php echo $row['id'];  ?>" class="text-light" style="text-decoration:none;">delete</a></button>
-                                        </td>
+                                       
+                                       
+                                        <td class="td1" style="border:solid;"><button type="button" class="btn btn-primary"><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" style="text-decoration:none;color:white" class="text-light">Edit</a></button><button type="button" class="btn btn-danger" style="text-decoration:none; "><a href="delete.php?id=<?php echo $row['id'];  ?>" class="text-light" style="text-decoration:none;">delete</a></button><button class="btn btn-warning"><a href="email.php">Cancel</a></button> 
+
+                                    </td>
 
                                     </tr>
 
@@ -375,6 +378,7 @@ if ($result->num_rows > 0) {
                                 <td style="border:solid;">
                                     <button class="btn btn-danger"><a href="deletetext.php?username=<?php echo $row['username']; ?> " style="text-decoration:none;color:white">delete</a></button>
                                     <button class="btn btn-primary"><a href="editsummary.php?username=<?php echo $row['username'] ?> " style="text-decoration:none;color:white">Edit</a></button>
+                                    
                                 </td>
                             </tr>
 

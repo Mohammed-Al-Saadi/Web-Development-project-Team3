@@ -3,17 +3,31 @@
 
 <?php
 include 'connect.php';
+
+
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
+
     $sql = "DELETE  FROM appointment WHERE id=$id";
     $result = mysqli_query($conn, $sql);
     if ($result) {
-echo"deleted.";    
 
-} else {
+        
+    echo "deleted.";
+
+}
+
+
+
+else 
+{
         die("Are you sure you want to delete. please check your tables." . $conn->connect_error);
     }
+
+    
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
