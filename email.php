@@ -28,14 +28,15 @@ $mail->Subject ="dferfefee";
 $mail->setFrom("wecare380@gmail.com");
 $mail->Body ="Your appointment is canceled.";
 
-$sql = "select username from appointment WHERE id=(SELECT max(id) FROM appointment)  ";
+$sql = "select username from appointment  ";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
-     $mail ->addAddress($row['username']);
+$mail ->addAddress($row['username']);
 
 if ($mail->Send()){
 header("location:employee.php");
+
 }
 else{
     echo "noooooooo";

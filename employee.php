@@ -299,7 +299,7 @@ if ($result->num_rows > 0) {
 
                                        
                                        
-                                        <td class="td1" style="border:solid;"><button type="button" class="btn btn-primary"><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" style="text-decoration:none;color:white" class="text-light">Edit</a></button><button type="button" class="btn btn-danger" style="text-decoration:none; "><a href="delete.php?id=<?php echo $row['id'];  ?>" class="text-light" style="text-decoration:none;">delete</a></button><button class="btn btn-warning"><a href="email.php">Cancel</a></button> 
+                                        <td class="td1" style="border:solid;"><button type="button" class="btn btn-primary"><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" style="text-decoration:none;color:white" class="text-light">Edit</a></button><button type="button" class="btn btn-danger" style="text-decoration:none; "><a href="delete.php?id=<?php echo $row['id'];  ?>" class="text-light" style="text-decoration:none;">delete</a></button><button class="btn btn-warning"><a href="email.php?id=<?php echo $row['username'];  ?>">Cancel</a></button> 
 
                                     </td>
 
