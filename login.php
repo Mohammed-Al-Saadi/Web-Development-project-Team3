@@ -56,7 +56,7 @@ include 'header.php';
     <div class="row row1">
         <center>
             <h3>Welcome to wecare login.</h3>
-            <br> <br><br> <br><br><br><br>
+            <br> <br><br> <br>
 
             <div class="col-lg-2 col1">
 
@@ -82,7 +82,7 @@ include 'header.php';
                 </form>
 
             </div>
-            <br><br> <br> <br><br><br>
+            <br><br> 
 
 
         </center>
