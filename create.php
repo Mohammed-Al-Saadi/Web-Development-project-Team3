@@ -11,7 +11,7 @@ $Gender= $_POST['Gender'];
 $Service= $_POST['Service'];
 
 
-$sql= "INSERT INTO Appointment (UserID, EmailID, Date1, Tim, gender, Services)
+$sql= "INSERT INTO Appointment (id, username, date1, tim, gender, services)
 VALUES ('$UserID', '$EmailID', '$Date', '$Time1', '$Gender', '$Service')";
 
 

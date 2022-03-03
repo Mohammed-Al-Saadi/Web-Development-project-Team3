@@ -12,7 +12,9 @@ include 'db.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
+    
     <style>
       h2{
         text-align:center;
@@ -30,10 +32,24 @@ include 'db.php';
       }
       th,td{
         padding: 15px;
+        margin-right:10px;
+
+      }
+      .scroll-up{
+        position: fixed;
+        border-radius: 20%;
+        width:50px;
+        height:50px;
+        right: 10px;
+        font-size:20px;
+        color:rgb(93, 175, 223);
+        background:white;
+        
 
       }
 
     </style>
+    
 </head>
 <body>
     <h2><b>CHECK YOUR HISTORY</b></h2>
@@ -53,10 +69,10 @@ include 'db.php';
     if($result){
     
     while ($row1 = mysqli_fetch_array($result)) {
-      $id=$row1['UserID'];
-      $date=$row1['Date1'];
-      $service=$row1['Services'];
-      $time=$row1['Tim'];
+      $id=$row1['id'];
+      $date=$row1['date1'];
+      $service=$row1['services'];
+      $time=$row1['tim'];
       
       echo '<tr class="table">
       <td>'.$id.'</td>
@@ -70,11 +86,13 @@ include 'db.php';
     }
   }
     ?>
+ 
     
 
  
 </table>
-    
+<button class="scroll-up"><i class="fa fa-chevron-up"></i></button>
+<script src="script.js" async></script>
 </body>
 </html>
 <?php
