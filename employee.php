@@ -81,7 +81,7 @@ if ($result->num_rows > 0) {
         .fixed {
             position: fixed;
             font-size: 18px;
-            bottom: 200px;
+            bottom: 280px;
             background: #98D6F5;
             padding: 40px;
             border-radius: 9px;

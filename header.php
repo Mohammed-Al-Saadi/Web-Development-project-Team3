@@ -92,7 +92,7 @@ border-bottom-color: rgb(255, 228, 204);
                 <a class="nav-link" href="index3.php">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Appointment</a>
+                <a class="nav-link" href="indexappointment.php">Appointment</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
