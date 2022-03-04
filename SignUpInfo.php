@@ -3,17 +3,16 @@
   include 'database.php';
 
 
-$Username = $_POST['Username'];
-$emailID = $_POST['emailID'];
-$Password= $_POST['Password'];
+$Username = $_POST['username'];
+$Password= $_POST['password'];
 
-$SQLLogin="INSERT INTO `SignUp` (`Username`, `email`, `Password`)
-	VALUES ('$Username', '$emailID', '$Password')";
+$SQLLogin="INSERT INTO `login` (`username`, `password`)
+	VALUES ('$Username', '$Password')";
 
 
 if($conn->query($SQLLogin) === TRUE) {
 
-    echo "New records added";
+    echo "Signup Successful!";
     //session_destroy();
 }
 else

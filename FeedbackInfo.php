@@ -15,7 +15,7 @@ $SQLFeedback="INSERT INTO `Feedback` (`UserID`, `EmailID`, `Subject`, `Message`,
 
 if($conn->query($SQLFeedback) === TRUE) {
 
-    echo "New records added";
+    echo "Feedback sent! please be patient,we typically respond within 72hrs";
     //session_destroy();
 }
 else
