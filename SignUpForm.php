@@ -1,62 +1,64 @@
+
+
+
+
 <!DOCTYPE html>
-<html>
-<body>
-    <style>
-{ margin: 0px; padding: 0px; }
-body {
-	font-size: 120%;
-	background: #F8F8FF;
-}
-.header {
-	width: 40%;
-	margin: 50px auto 0px;
-	color: white;
-	background: #5F9EA0;
-	text-align: left;
-	border: 1px solid #B0C4DE;
-	border-bottom: none;
-	border-radius: 10px 10px 0px 0px;
-	padding: 20px;
-}
-form, .content {
-	width: 40%;
-	margin: 0px auto;
-	padding: 20px;
-	border: 1px solid #B0C4DE;
-	background: white;
-	border-radius: 0px 0px 10px 10px;
-}
+<html lang="en">
 
-.btn {
-	padding: 10px;
-	font-size: 15px;
-	color: white;
-	background: #5F9EA0;
-	border: none;
-	border-radius: 5px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Form.css">
+    <title>Document</title>
+   
+</head>
 
-    </style>
-<div class="header">
-	<h2>Sign Up</h2>
+<body onload='document.form.password.focus()'>
+<?php include 'header.php' ?>
+
+ <div class="sgnup">
+    <h2>Sign Up</h2>
 </div>
-<form method="POST" action="SignUpInfo.php">
+<form name="form" method="POST", class="signup">
         <div class="col-md">
-  	        <label for="Username">Username:</label> <input type="text" id="Username" name="Username" required></p>
+            <label for="username">Username:</label> <input type="text" id="username" name="username" required/></p>
         </div>
+        
         <div class="col-md">
-  	        <label for="email">Email:</label> <input type="text" id="emailID" name="emailID" required></p>
+            <label for="password">Password:</label> <input type="text" id="password" name="password" required/></p>
         </div>
-        <div class="col-md">
-            <label for="Password">Password:</label> <input type="text" id="Password" name="Password" required></p>
-        </div>
-        <input type="submit" name="submit" value="Sign Up" class="btn btn-primary">
-	</form>
+        <input type="submit" name="submit" value="Sign Up" class="btn btn-primary" onclick="CheckPassword(document.form.password)">
+    </form>
+
+ 
 </body>
 <script>
-    const Username = document.getElementById('Username')
-    const emailID = document.getElementById('emailID')
-    const Password= document.getElementById('Password')
+	function CheckPassword(inputtxt) 
+{ 
+var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+if(inputtxt.value.match(passw)) 
+{ 
+
+	const Username = document.getElementById('username')
+    const Password= document.getElementById('password')
+	form.action='SignupInfo.php'
+
+}
+else
+{ 
+alert('password must have at least one UPPERCASE letter, at least one lowercase letter and one numeric digit!!')
+}
+}
 </script>
 
-</html>
+   <br><br> <br><br> <br> <br> <br><br>
+    <?php include  'footer.php' ?>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  </html>
+
