@@ -48,7 +48,9 @@ height: auto;
 
       <div class="copyright">
           <img src="Picturekaisa.png" alt="logo">
+
            <p>&copy; 2022 wecare<br><a href="FeedbackForm.php">Give feedback</a></p>
+
           </div>
 
       </div>

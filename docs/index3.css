@@ -1,0 +1,125 @@
+
+.form-group {
+    width: 300px;
+    margin: auto;
+}
+.row1{
+    margin-top: 60px;
+}
+
+
+
+.navbar-brand img {
+    width: 180px;
+
+} 
+.container-fluid {
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.nav-item a{
+margin-left: 110px;
+font-weight: bold;
+
+
+}
+
+.d-flex{
+
+    margin-right: 30px;
+
+}
+
+.dropdown-menu{
+    background-color: rgb(93, 175, 223);
+    border: none;
+}
+
+
+
+
+
+  
+    
+    .footer
+    
+    {
+   
+       
+        margin-top: 100px;
+        background-color: rgb(93, 175, 223);
+    }
+
+.copyright{
+
+ margin-left: 20px;
+
+}
+.copyright p
+{
+margin-left: 5px;
+
+}
+.footer img {
+width: 120px;
+height: auto;
+}
+
+
+body{
+background-image: url("Picture1.jpg");    background-size: cover;
+    background-position: center;
+}
+
+
+.navbar{
+background-color: rgb(93, 175, 223);
+
+}
+
+ .btn-outline-success{
+
+    background-color: white;
+    color: black;
+
+}
+.followus a{
+    font-size: 20px;
+}
+.row2{
+    text-align: center;
+    margin-top: 80px;
+  
+}
+article{
+    text-align: center;
+}
+iframe{
+    width: 350px;
+}
+.row1{
+    text-align: center;
+}
+
+
+@media(max-width: 1000px){
+    .copyright{
+        margin: 0px;
+    }
+    .navbar a{
+        margin-left: 10px;
+   }
+   .navbar-nav a{
+border-bottom: 3px inset;
+border-width: 1px;
+border-bottom-color: rgb(255, 228, 204);
+
+}
+
+
+
+
+}
+    
+    
