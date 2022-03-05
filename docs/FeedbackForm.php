@@ -1,9 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION["username"])) {
-    header("location:login.php");
-} ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +10,8 @@ if (!isset($_SESSION["username"])) {
 
 <body>
     <?php include 'header.php' ?>
-    <br> <br><br><br>
+    <br> <br><br><br>            <br><br><br><br><br>
+
 
     <div class="row row1">
         <div class="col-lg">
@@ -42,14 +37,14 @@ if (!isset($_SESSION["username"])) {
 
                 $sql = "insert into feedback (username , subject, text) value ('$username' , '$subject','$text') ";
                 if ($conn->query($sql) === TRUE) {
-                    echo "Feedback sent! please be patient,we respond within 72hrs.";                } else {
+                    echo "Feedback sent! please be patient,we respond within 72hrs.";
+                } else {
                     echo "Please chech your input. ";
                 }
             }
 
             ?>
-            <br><br>
-            <br>
+            <br><br><br><br>
         </div>
     </div>
     <?php include 'footer.php' ?>
