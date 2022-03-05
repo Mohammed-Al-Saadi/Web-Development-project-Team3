@@ -405,7 +405,7 @@ if ($result->num_rows > 0) {
         <div class="row">
             <div class="col-lg-6 colfeed">
             <div class=" my-custom-scrollbar">
-
+<h4>Feedback history:</h4>
             <table class="table">
 
 <tr style="border:solid;  background: #98D6F5;
@@ -413,7 +413,7 @@ if ($result->num_rows > 0) {
     <td style="border:solid;">Username</td>
     <td style="border:solid;">Subject</td>
     <td class="td2" >Message</td>
-    <td class="td2" style="border:solid;">Delete</td>
+    <td class="td2" style="border:solid;width:30px">Delete</td>
 
 </tr>
 <?php
@@ -432,10 +432,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
     <tr style="border:solid;">
-        <td style="border:solid;"><?php echo $username; ?></td>
-        <td style="border:solid;"><?php echo $subject; ?></td>
-        <td style="border:solid;"><?php echo $text; ?></td>
-        <td><button class="btn btn-danger"><a href="deletefeed.php?username=<?php echo $row['username']; ?> " style="text-decoration:none;color:white">delete</a></button></td>
+        <td style="border:solid; width:60px"><?php echo $username; ?></td>
+        <td style="border:solid;width:60px"><?php echo $subject; ?></td>
+        <td style="border:solid;width:300px"><?php echo $text; ?></td>
+        <td style="border:solid;"><button class="btn btn-danger"><a href="deletefeed.php?username=<?php echo $row['username']; ?> " style="text-decoration:none;color:white">delete</a></button></td>
 
         
     </tr>
@@ -443,12 +443,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 <?php } ?>
 
 </table>
+
 </div>
             </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-  
+       
+        <br><br><br><br><br>
+
 
         <?php include 'footer.php' ?>
 

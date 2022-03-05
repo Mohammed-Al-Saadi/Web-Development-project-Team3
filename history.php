@@ -1,3 +1,5 @@
+
+
 <?php
 include 'header.php';
 include 'connect.php';
@@ -66,7 +68,7 @@ include 'connect.php';
   </tr>
   
   <?php
-  $sql = "select * from appointment";
+  $sql = "select * from appointment WHERE id=(SELECT max(id) FROM appointment) ";
   $result = $conn->query($sql);
     if($result){
     
@@ -101,6 +103,9 @@ include 'connect.php';
 <script src="script.js" async></script>
 </body>
 </html>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 <?php
 include 'footer.php';
 ?>
