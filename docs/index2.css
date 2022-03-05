@@ -42,21 +42,13 @@ article{
 
 }
 
-.navbar-brand img {
-    width: 180px;
 
-} 
 .container-fluid {
 
 font-family: Arial, Helvetica, sans-serif;
 
 }
-.nav-item a{
-margin-left: 110px;
-font-weight: bold;
 
-
-}
 
 .d-flex{
 
@@ -80,30 +72,6 @@ border-radius: 9px;
 
   
     
-    .footer
-    
-    {
-   
-       
-        margin-top: 100px;
-        background-color: rgb(93, 175, 223);
-    }
-
-.copyright{
-
- margin-left: 20px;
-
-}
-.copyright p
-{
-margin-left: 5px;
-
-}
-.footer img {
-width: 120px;
-height: auto;
-}
-
 
 body{
 background-image: url("Picture1.jpg");    background-size: cover;
@@ -111,25 +79,15 @@ background-image: url("Picture1.jpg");    background-size: cover;
 }
 
 
-.navbar{
-background-color: rgb(93, 175, 223);
 
-}
-.dropdown-menu{
-    background-color: rgb(93, 175, 223);
 
-    border: none;
-
-}
  .btn-outline-success{
 
     background-color: white;
     color: black;
 
 }
-.followus a{
-    font-size: 20px;
-}
+
 .row2 {
 
 text-align: center;
@@ -154,24 +112,9 @@ margin-bottom: 50px;
     
     }
  
-
-@media(max-width: 1000px){
-    .copyright{
-        margin: 0px;
+    .dropdown-menu{
+        background-color: rgb(93, 175, 223);
+        border: none;
     }
-    .navbar a{
-        margin-left: 10px;
-   }
-   .navbar-nav a{
-border-bottom: 3px inset;
-border-width: 1px;
-border-bottom-color: rgb(255, 228, 204);
-
-}
-
-
-
-
-}
     
     
