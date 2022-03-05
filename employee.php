@@ -70,7 +70,7 @@ if ($result->num_rows > 0) {
 
         }
 
-  
+
 
         .fixed li {
             list-style: none;
@@ -183,6 +183,9 @@ if ($result->num_rows > 0) {
             }
 
         }
+        .colfeed{
+            margin: 0 auto;
+        }
     </style>
 </head>
 
@@ -254,7 +257,9 @@ if ($result->num_rows > 0) {
 
                         <li><a href="#section1">Patient appointment</a></li>
                         <li><a href="#section2">Add a summary</a></li>
-                        <li><a href="#section3">Patient summaries:</a></li>
+                        <li><a href="#section3">Patient summaries</a></li>
+                        <li><a href="#section4">Feedback history</a></li>
+
                     </ul>
                 </div>
 
@@ -297,11 +302,11 @@ if ($result->num_rows > 0) {
                                         <td style="border:solid;"><?php echo $service; ?></td>
                                         <td style="border:solid;"><?php echo $tim; ?></td>
 
-                                       
-                                       
-                                        <td class="td1" style="border:solid;"><button type="button" class="btn btn-primary"><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" style="text-decoration:none;color:white" class="text-light">Edit</a></button><button type="button" class="btn btn-danger" style="text-decoration:none; "><a href="delete.php?id=<?php echo $row['id'];  ?>" class="text-light" style="text-decoration:none;">delete</a></button><button class="btn btn-warning"><a href="email.php?id=<?php echo $row['username'];  ?>">Cancel</a></button> 
 
-                                    </td>
+
+                                        <td class="td1" style="border:solid;"><button type="button" class="btn btn-primary"><a href="update.php?id=<?php echo $row['id'];  ?>" class="hh" style="text-decoration:none;color:white" class="text-light">Edit</a></button><button type="button" class="btn btn-danger" style="text-decoration:none; "><a href="delete.php?id=<?php echo $row['id'];  ?>" class="text-light" style="text-decoration:none;">delete</a></button><button class="btn btn-warning"><a href="email.php?id=<?php echo $row['username'];  ?>">Cancel</a></button>
+
+                                        </td>
 
                                     </tr>
 
@@ -378,7 +383,7 @@ if ($result->num_rows > 0) {
                                 <td style="border:solid;">
                                     <button class="btn btn-danger"><a href="deletetext.php?username=<?php echo $row['username']; ?> " style="text-decoration:none;color:white">delete</a></button>
                                     <button class="btn btn-primary"><a href="editsummary.php?username=<?php echo $row['username'] ?> " style="text-decoration:none;color:white">Edit</a></button>
-                                    
+
                                 </td>
                             </tr>
 
@@ -391,10 +396,64 @@ if ($result->num_rows > 0) {
         </div>
         <br><br> <br>
         <br><br>
-        <?php include 'footer.php' ?>
         </div>
+    </section>
+    
+    <section id="section4">
+    <br><br><br><br><br><br><br>
+
+        <div class="row">
+            <div class="col-lg-6 colfeed">
+            <div class=" my-custom-scrollbar">
+
+            <table class="table">
+
+<tr style="border:solid;  background: #98D6F5;
+">
+    <td style="border:solid;">Username</td>
+    <td style="border:solid;">Subject</td>
+    <td class="td2" >Message</td>
+    <td class="td2" style="border:solid;">Delete</td>
+
+</tr>
+<?php
+include 'connect.php';
+$sql = "select * from feedback";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+}
+while ($row = mysqli_fetch_assoc($result)) {
+
+    $text = $row['text'];
+    $username = $row['username'];
+    $subject = $row['subject'];
+
+?>
+
+
+    <tr style="border:solid;">
+        <td style="border:solid;"><?php echo $username; ?></td>
+        <td style="border:solid;"><?php echo $subject; ?></td>
+        <td style="border:solid;"><?php echo $text; ?></td>
+        <td><button class="btn btn-danger"><a href="deletefeed.php?username=<?php echo $row['username']; ?> " style="text-decoration:none;color:white">delete</a></button></td>
+
+        
+    </tr>
+
+<?php } ?>
+
+</table>
+</div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
+  
+
+        <?php include 'footer.php' ?>
 
     </section>
+
     </div>
     <script type="application/javascript">
         function tableSearch() {

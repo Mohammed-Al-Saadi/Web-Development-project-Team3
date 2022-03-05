@@ -52,9 +52,9 @@ include 'header.php';
 <body>
 
 
+<center>
 
     <div class="row row1">
-        <center>
             <h3>Welcome to wecare login.</h3>
             <br> <br><br> <br>
 
@@ -77,17 +77,20 @@ include 'header.php';
                     </div>
                     <div class="btn">
                         <input type="submit" class="btn btn-primary" value="Login">
-                        <button class="btn btn-primary">Sign up</button>
+                        <button class="btn btn-primary"><a href="sginup.php" style="color:white; text-decoration:none">Sign up</a></button>
                     </div>
                 </form>
 
             </div>
-            <br><br> <br><br><br><br>
+            <br><br>  <br><br>  <br><br>  <br><br> 
+            <br><br>  <br><br>  <br><br>  <br><br> 
 
+            <br><br>  <br><br>  <br><br>  <
 
-        </center>
 
     </div>
+    </center>
+
     <style>
         .row1 {
             margin: 60px auto;
@@ -103,7 +106,10 @@ include 'header.php';
             margin-top: 20px;
         }
 
-        .col1 {}
+        .col1 {
+            margin: 0px auto;
+
+        }
 
         form {
             border: solid;

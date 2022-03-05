@@ -173,7 +173,7 @@ margin-left:60px;
             <ul>
                 <li><a href="??????">Welcome to wecare</a></li><br><br>
 
-                <li><a href="??????">Check your history</a></li><br><br>
+                <li><a href="history.php">Check your history</a></li><br><br>
 
                 <li><a href="??????">Coronavirus COVID-19</a></li><br><br>
 
