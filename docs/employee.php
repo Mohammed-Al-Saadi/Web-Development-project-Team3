@@ -237,7 +237,7 @@ if ($result->num_rows > 0) {
                 </div>
 
                 <div class="col-4 col4">
-
+                <br><br>
                     <input type="text" class="input" id="myInput" onkeyup='tableSearch()' placeholder="Search by name..">
 
                     <button type="button" class="btn btn-primary"><a href="userapp.php" class="text-light" style="text-decoration:none">Add appointment</a></button>
