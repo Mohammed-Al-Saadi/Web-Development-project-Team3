@@ -330,7 +330,7 @@ if ($result->num_rows > 0) {
 
     <section id="section2">
 
-
+    <br><br><br><br><br>
         <div class="row row4">
             <div class="col-lg-6 col6">
                 <form action="addtext.php" method="GET">
