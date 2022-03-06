@@ -232,6 +232,7 @@ if ($result->num_rows > 0) {
         <section id="section1">
             <div class="row row3">
                 <div class="col-8  ">
+                <br><br>
                     <h4>Patient appointment:</h4>
                 </div>
 
@@ -348,7 +349,7 @@ if ($result->num_rows > 0) {
         </div>
     </section>
     <section id="section3">
-
+    <br>
         <div class="row row5">
             <h4>Patient summaries:</h4>
 
@@ -400,7 +401,7 @@ if ($result->num_rows > 0) {
     </section>
     
     <section id="section4">
-    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
     <h4>Feedback history:</h4>
 
         <div class="row">
