@@ -401,11 +401,11 @@ if ($result->num_rows > 0) {
     
     <section id="section4">
     <br><br><br><br><br><br><br>
+    <h4>Feedback history:</h4>
 
         <div class="row">
             <div class="col-lg-6 colfeed">
             <div class=" my-custom-scrollbar">
-<h4>Feedback history:</h4>
             <table class="table">
 
 <tr style="border:solid;  background: #98D6F5;
